@@ -31,12 +31,13 @@ pipeline{
             steps{
                 echo "Deploying to Heroku"
                 bat "git remote -v"
-                bat "set"
+                //bat "set"
 
                 //Add Heroku git reference
                 bat "echo ${heroku_login_USR} && echo ${heroku_login_PSW} | \"C:\\Program Files\\heroku\\bin\\heroku\" login"
                 bat "\"C:\\Program Files\\heroku\\bin\\heroku\" git:remote -a morning-ocean-45440" 
                 bat "git remote -v"
+                bat "git push heroku main"
             }
         }
     }
