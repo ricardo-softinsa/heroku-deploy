@@ -11,6 +11,7 @@ pipeline{
                         bat "${scannerHome}/bin/sonar-scanner"
                     }
                 }
+            }
         }
         stage('SonarQube - QualityGates'){
             steps{
