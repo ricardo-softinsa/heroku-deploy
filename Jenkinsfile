@@ -40,7 +40,7 @@ pipeline{
                 //Fetch Heroku refs
                 bat "git pull heroku main"
                 //Push to heroku
-                bat "git push heroku master"
+                bat "git push --force heroku master"
             }
         }
     }
