@@ -37,6 +37,9 @@ pipeline{
                 bat "echo ${heroku_login_USR} && echo ${heroku_login_PSW} | \"C:\\Program Files\\heroku\\bin\\heroku\" login"
                 bat "\"C:\\Program Files\\heroku\\bin\\heroku\" git:remote -a morning-ocean-45440" 
                 bat "git remote -v"
+                //Fetch Heroku refs
+                bat "git pull heroku main"
+                //Push to heroku
                 bat "git push heroku master"
             }
         }
