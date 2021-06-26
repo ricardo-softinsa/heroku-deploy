@@ -2,6 +2,9 @@ pipeline{
     agent{
         label 'master'
     }
+    environment{
+        heroku_login = credentials('heroku_login')
+    }
     stages{
         stage('SonarQube - Analysis'){
             steps{echo "analysis"
@@ -31,6 +34,7 @@ pipeline{
                 bat "set"
 
                 //Add Heroku git reference
+                bat "echo ${heroku_login_USR} && echo ${heroku_login_PSW} | heroku login"
                 bat "\"C:\\Program Files\\heroku\\bin\\heroku\" git:remote -a morning-ocean-45440" 
                 bat "git remote -v"
             }
