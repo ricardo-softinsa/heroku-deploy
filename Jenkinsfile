@@ -39,6 +39,7 @@ pipeline{
                 bat "git remote -v"
                 //Fetch Heroku refs
                 bat "git fetch heroku"
+                bat "cd .git/refs/remotes && dir"
 
                 //Push to heroku
                 bat "git push --force heroku main"
