@@ -30,7 +30,7 @@ pipeline{
                 bat "set"
 
                 //Add Heroku git reference
-                bat "heroku git:remote -a morning-ocean-45440" 
+                bat "C:\\Program Files\\heroku\\bin\\heroku git:remote -a morning-ocean-45440" 
                 bat "git remote -v"
             }
         }
