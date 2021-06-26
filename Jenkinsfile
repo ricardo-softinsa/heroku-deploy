@@ -27,7 +27,16 @@ pipeline{
             steps{
                 echo "Deploying to Heroku"
                 bat "git remote -v"
+
+                //Add Heroku git reference
+                bat "heroku git:remote -a morning-ocean-45440" 
+                bat "git remote -v"
             }
+        }
+    }
+    post{
+        always{
+            deleteDir()
         }
     }
 }
