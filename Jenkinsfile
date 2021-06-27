@@ -38,11 +38,11 @@ pipeline{
                 bat "\"C:\\Program Files\\heroku\\bin\\heroku\" git:remote -a morning-ocean-45440" 
                 bat "git remote -v"
                 //Fetch Heroku refs
-                bat "git fetch heroku"
+                bat "git pull heroku"
                 //bat "cd .git/refs/remotes/heroku && cat main"
 
                 //Push to heroku
-                bat "git push --force heroku heroku/main"
+                bat "git push --force heroku main"
             }
         }
     }
