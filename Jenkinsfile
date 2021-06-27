@@ -42,7 +42,7 @@ pipeline{
                 bat "cd .git/refs/remotes/heroku && cat main"
 
                 //Push to heroku
-                bat "git push --force heroku main"
+                bat "git push --force heroku heroku/main"
             }
         }
     }
